@@ -1,14 +1,4 @@
-# Turborepo starter
-
-This is an official starter Turborepo.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+# Easy Finance
 
 ## What's inside?
 
@@ -46,7 +36,8 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cp .env.example .env
+docker compose -f docker-compose.dev.yml up -d
 pnpm dev
 ```
 
