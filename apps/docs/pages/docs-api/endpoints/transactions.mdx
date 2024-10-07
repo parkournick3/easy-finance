@@ -1,0 +1,71 @@
+# Transactions
+
+import { Callout } from "nextra/components";
+
+<Callout emoji="🔒">
+  All endpoints require a valid JWT token in the Authorization header. See
+  [Authentication](/docs-api/endpoints/authentication) for more details.
+</Callout>
+
+**📄 Required Headers**
+
+```json
+{
+  "Authorization": "Bearer <accessToken>"
+}
+```
+
+### POST /transactions
+
+Method: **POST**  
+Description: Endpoint to create a new transaction.
+
+**📄 Request Body**
+
+```json
+{
+  "amount": 10.99,
+  "date": "2024-09-17T00:17:09.644Z",
+  "description": "mc donalds",
+  "accountId": "b33d9656-9190-4cb0-9369-8fa961a1f890"
+}
+```
+
+**✅ Success Response**
+
+```json
+{
+  "id": "bd000041-5cee-462b-a032-58c556f492e0",
+  "accountId": "b33d9656-9190-4cb0-9369-8fa961a1f890",
+  "personId": "3fa5cd1a-9cb4-42b0-8f04-dcef6d471360",
+  "amount": 10.99,
+  "description": "mc donalds",
+  "date": "2024-09-17T00:17:09.644Z",
+  "createdAt": "2024-10-07T22:32:01.390Z",
+  "updatedAt": "2024-10-07T22:32:01.390Z"
+}
+```
+
+---
+
+### GET /transactions/:accountId
+
+Method: **GET**
+Description: Endpoint to list all transactions from an account.
+
+**✅ Success Response**
+
+```json
+[
+  {
+    "id": "bd000041-5cee-462b-a032-58c556f492e0",
+    "accountId": "b33d9656-9190-4cb0-9369-8fa961a1f890",
+    "personId": "3fa5cd1a-9cb4-42b0-8f04-dcef6d471360",
+    "amount": 10.99,
+    "description": "mc donalds",
+    "date": "2024-09-17T00:17:09.644Z",
+    "createdAt": "2024-10-07T22:32:01.390Z",
+    "updatedAt": "2024-10-07T22:32:01.390Z"
+  }
+]
+```

@@ -1,0 +1,39 @@
+# Users
+
+### POST /users
+
+Method: **POST**  
+Description: Endpoint to create a new user.
+
+**📄 Request Body**
+
+```json
+{
+  "email": "nicolas@gmail.com",
+  "password": "supersecret",
+  "firstName": "Nicolas",
+  "lastName": "Alexandre",
+  "currency": "BRL"
+}
+```
+
+**✅ Success Response**
+
+```json
+{
+  "id": "8693fd3e-4f40-495a-be42-8484fd7848d1",
+  "email": "nicolas@gmail.com",
+  "createdAt": "2024-10-07T22:26:07.722Z",
+  "updatedAt": "2024-10-07T22:26:07.722Z"
+}
+```
+
+**❌ Conflict Response**
+
+```json
+{
+  "message": "User already exists",
+  "error": "Conflict",
+  "statusCode": 409
+}
+```

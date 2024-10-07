@@ -1,0 +1,33 @@
+# Authentication
+
+### POST /sessions
+
+Method: **POST**  
+Description: Endpoint to authenticate a user. Returns an access token.
+
+**📄 Request Body**
+
+```json
+{
+  "email": "nicolas@gmail.com",
+  "password": "supersecret"
+}
+```
+
+**✅ Success Response**
+
+```json
+{
+  "accessToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZDBhYTY4MC04NjlkLTQyOWYtOTcyZS00ZTkwMWYwMzEzM2QiLCJpYXQiOjE3MjgyNDgwMDd9.u8v0JlvFwTGKo98rS3Y8YWd82aGUlOkwjXJk52K2Ya46uJyCv5XaGSUyu3c_Vs_t-3eMa39IIkgnWor-G2QcDrcs-SRzwANtjTDeytdQ4jz4aY1w3Ft1dxi1ZBR8Po1Ed07iGK5RqTH1WvQZx9e69jBNxgTZ7M9P-MVI7lSkiVYjo81TSCaR-d6Q2opLhzLbydChNxwnnSA3n85kee_HCEvj5vtZJTBN8sfB5fj8Y5menXAZBnVJdEfcUmAkHFfmuyjmkbmTteIe0Hnv4gYNodkBfh8LhdbwjUkx5d4khKzUFRvN29VTGRGvt1F2kOC-Da5UbZVIwp8QVisN5XWIOw"
+}
+```
+
+**❌ Error Response**
+
+```json
+{
+  "message": "Invalid credentials",
+  "error": "Unauthorized",
+  "statusCode": 401
+}
+```
