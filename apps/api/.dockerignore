@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+Dockerfile
+dist
+.turbo
+.env
+test
+README.md
+.prettierrc
+.git
+.gitignore
+.dockerignore
