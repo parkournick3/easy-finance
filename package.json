@@ -7,6 +7,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "db:studio": "turbo db:studio",
+    "db:migrate": "turbo db:migrate",
+    "db:generate": "turbo db:generate",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "db:start": "docker compose -f docker-compose.dev.yml up -d",
     "prepare": "husky",

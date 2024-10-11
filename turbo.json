@@ -19,6 +19,12 @@
     },
     "db:studio": {
       "dependsOn": ["^db:studio"]
+    },
+    "db:generate": {
+      "dependsOn": ["^db:generate"]
+    },
+    "db:migrate": {
+      "dependsOn": ["^db:migrate"]
     }
   }
 }
