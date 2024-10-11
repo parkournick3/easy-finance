@@ -1,3 +1,35 @@
 {
-  "hello": "Olá, Mundo!"
+  "hello": "Olá, Mundo!",
+  "sign_in": {
+    "password": {
+      "placeholder": "Senha"
+    },
+    "email": {
+      "placeholder": "E-mail"
+    },
+    "first_name": {
+      "placeholder": "Nome"
+    },
+    "last_name": {
+      "placeholder": "Sobrenome"
+    },
+    "currency": {
+      "placeholder": "Moeda"
+    },
+    "no_account": "Não tem uma conta?",
+    "submit": "Entrar"
+  },
+  "sign_up": {
+    "password": {
+      "placeholder": "Senha"
+    },
+    "email": {
+      "placeholder": "E-mail"
+    },
+    "has_account": "Já tem uma conta?",
+    "submit": "Cadastrar"
+  },
+  "common": {
+    "loading": "Carregando..."
+  }
 }
