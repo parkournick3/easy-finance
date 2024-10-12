@@ -1,6 +1,6 @@
 {
   "hello": "Olá, Mundo!",
-  "sign_in": {
+  "sign_up": {
     "password": {
       "placeholder": "Senha"
     },
@@ -16,20 +16,22 @@
     "currency": {
       "placeholder": "Moeda"
     },
-    "no_account": "Não tem uma conta?",
+    "success": "Tudo pronto para começar!",
+    "has_account": "Já tem uma conta?",
     "submit": "Entrar"
   },
-  "sign_up": {
+  "sign_in": {
     "password": {
       "placeholder": "Senha"
     },
     "email": {
       "placeholder": "E-mail"
     },
-    "has_account": "Já tem uma conta?",
+    "no_account": "Não tem uma conta?",
     "submit": "Cadastrar"
   },
   "common": {
-    "loading": "Carregando..."
+    "loading": "Carregando...",
+    "error": "Ops! Algo de errado não deu certo... Tente novamente mais tarde!"
   }
 }

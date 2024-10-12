@@ -4,6 +4,8 @@ import { getMessages } from "next-intl/server";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@repo/ui/globals.css";
+import { Toaster } from "@repo/ui/components/ui/toaster";
+import ReactQueryProvider from "@/api/react-query-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +36,10 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ReactQueryProvider>
+            <Toaster />
+            {children}
+          </ReactQueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

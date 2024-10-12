@@ -1,0 +1,32 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "db:studio": "pnpx prisma studio",
+    "db:migrate": "pnpx prisma migrate dev",
+    "db:generate": "pnpx prisma generate",
+    "build": "tsc --build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5",
+    "prisma": "^5.20.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

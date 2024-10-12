@@ -25,6 +25,9 @@
     },
     "db:migrate": {
       "dependsOn": ["^db:migrate"]
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
     }
   }
 }

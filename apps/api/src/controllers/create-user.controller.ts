@@ -4,16 +4,11 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { hash } from 'bcryptjs';
 import { z } from 'zod';
 import { ZodValidationPipe } from 'src/pipes/zod-validation.pipe';
-
-const createUserSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(6),
-  firstName: z.string(),
-  lastName: z.string(),
-  currency: z.string(),
-});
-
-type CreateUserInput = z.infer<typeof createUserSchema>;
+import {
+  CreateUserInput,
+  CreateUserResponse,
+  createUserSchema,
+} from '@repo/validations-and-types';
 
 @Controller('users')
 export class CreateUserController {
@@ -22,7 +17,7 @@ export class CreateUserController {
   @Post()
   @HttpCode(201)
   @UsePipes(new ZodValidationPipe(createUserSchema))
-  async createUser(@Body() body: CreateUserInput) {
+  async createUser(@Body() body: CreateUserInput): Promise<CreateUserResponse> {
     const { email, password, firstName, lastName, currency } = body;
 
     const userExists = await this.prisma.user.findUnique({
@@ -56,6 +51,7 @@ export class CreateUserController {
       },
     });
 
-    return { ...user, password: undefined };
+    const { password: _, ...userWithoutPassword } = user;
+    return userWithoutPassword;
   }
 }

@@ -1,0 +1,30 @@
+{
+  "name": "@repo/validations-and-types",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "dev": "tsc --watch",
+    "build": "tsc --build"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "zod": "^3.23.8",
+    "zod-validation-error": "^3.4.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}
