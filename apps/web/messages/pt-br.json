@@ -18,7 +18,7 @@
     },
     "success": "Tudo pronto para começar!",
     "has_account": "Já tem uma conta?",
-    "submit": "Entrar"
+    "submit": "Cadastrar"
   },
   "sign_in": {
     "password": {
@@ -27,8 +27,9 @@
     "email": {
       "placeholder": "E-mail"
     },
+    "success": "Bem-vindo de volta!",
     "no_account": "Não tem uma conta?",
-    "submit": "Cadastrar"
+    "submit": "Entrar"
   },
   "common": {
     "loading": "Carregando...",
